@@ -61,7 +61,7 @@ def build_query(data):
     return query
 
 
-class NvDb(object):
+class Nventory(object):
     ''' Represents a connection to the nventory DB. '''
     def __init__(self, ini_file=None, url=None, verbose=False):
         self.url = None
