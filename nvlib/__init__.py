@@ -346,6 +346,11 @@ class Nventory(object):
                 (self.url, msg))
             error_msg(message)
             return None
+        except urllib2.URLError, msg:
+            message = (
+                'Invalid URL: %s' % self.url)
+            error_msg(message)
+            return None
         if rtc.code != 200:
             return None
         if endpoint != 'nodes.json':
